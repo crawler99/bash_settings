@@ -1,0 +1,20 @@
+# Set the ulimit to ensure that the creation of core files are never avoided on size grounds
+ulimit -H -c unlimited > /dev/null
+ulimit -S -c unlimited > /dev/null
+
+# Deal with the umask
+umask 027
+
+# RS_PLATFORM identifies the OS and machine type, eg SunOSi386, or SunOSsparc.
+export RS_PLATFORM=`uname -s``uname -p`
+
+# Hostname
+export RS_HOSTNAME=${HOSTNAME}
+
+# Alias
+alias dsu='find $1 -type d | xargs du -sm | sort -g'
+alias tg='ctags -R *'
+
+# Prompt
+export PS1="[\u@\h \W] "
+
