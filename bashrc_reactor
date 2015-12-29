@@ -31,6 +31,9 @@ alias rss='cd `readlink ${RS_ROOT}/release`/src'
 alias rsv='cd $RS_VAR'
 alias rsr='cd $RS_ROOT'
 
+export REACTOR_RELEASE_PATH=`readlink ${RS_ROOT}/release`
+alias rsb='cd "${RS_VAR}/../build/""${REACTOR_RELEASE_PATH//\//_}"'
+
 # Tibco Setup
 #export RV_ROOT=${RS_BUILDKIT}/Linux/i686-gcc4.1.x/tibrv/8.1
 #export RS_RV_ROOT=${RV_ROOT}
