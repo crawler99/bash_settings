@@ -1,0 +1,47 @@
+# Perforce config
+export P4CLIENT=jtao-linux
+export P4PORT=perforce1:1999
+export P4EDITOR=vim
+
+# Reactor runtime environment
+export RS_ROOT=~/reactorRoot
+export RS_VAR=/opt/developer/jtao/reactor/log
+
+if [ `uname -i` == x86_64 ]; then
+    export RS_BUILDKIT=/home/build/BuildKit/BuildKit2_jtao
+else
+    export RS_BUILDKIT=/home/build/BuildKit/BuildKit
+fi
+
+# Path and lib path
+if [ `uname -i` == x86_64 ]; then
+    export PYTHONHOME=${RS_BUILDKIT}/python2
+	export PATH=${HOME}/bin:${RS_BUILDKIT}/cmake/bin:${RS_BUILDKIT}/gdb/bin:${RS_BUILDKIT}/29west/bin:$PATH
+	export LD_LIBRARY_PATH=${HOME}/lib:${RS_BUILDKIT}/gcc/lib64:${PYTHONHOME}/lib:${RS_BUILDKIT}/29west/lib:${LD_LIBRARY_PATH}
+else
+	export PATH=${HOME}/bin:/home/build/bin:${RS_BUILDKIT}/Linux/i686-gcc4.1.x/29west/UMS_6.5/Linux-glibc-2.3-i686/bin:$PATH
+	export LD_LIBRARY_PATH=${HOME}/lib:${RS_BUILDKIT}/Linux/i686-gcc4.1.x/29west/UMS_6.5/Linux-glibc-2.3-i686/lib:/usr/local/lib:${LD_LIBRARY_PATH}
+fi
+
+# Reactor Dev Environment
+export USE_NATIVE_STLPORT=1
+
+# Alias
+alias rss='cd `readlink ${RS_ROOT}/release`/src'
+alias rsv='cd $RS_VAR'
+alias rsr='cd $RS_ROOT'
+
+# Tibco Setup
+#export RV_ROOT=${RS_BUILDKIT}/Linux/i686-gcc4.1.x/tibrv/8.1
+#export RS_RV_ROOT=${RV_ROOT}
+#export RS_RV_INC=${RS_RV_ROOT}/include
+#export RS_RV_LIB=${RS_RV_ROOT}/lib
+#export RS_RV_BIN=${RS_RV_ROOT}/bin
+
+# Versant Setup
+#export VERSANT_ROOT=/usr/local/versant/7.0.1
+#export RS_VERSANT_ROOT=${VERSANT_ROOT}
+#export RS_VERSANT_INC=${RS_VERSANT_ROOT}/h
+#export RS_VERSANT_LIB=${RS_VERSANT_ROOT}/lib
+#export RS_VERSANT_BIN=${RS_VERSANT_ROOT}/bin
+
