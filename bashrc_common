@@ -16,5 +16,6 @@ alias dsu='find $1 -type d | xargs du -sm | sort -g'
 alias tg='ctags -R *'
 
 # Prompt
-export PS1="[\u@\h \W] "
+#export PS1="[\u@\h \W] "
+export PS1="\[$bldblk\][\[$txtgrn\]\D{%F %T}\[$bldblk\]]\[$bldblk\][\[$bldblk\]\u@\h \[$bldred\]\w\[$bldblk\]]\n\$ \[$txtrst\]"
 
