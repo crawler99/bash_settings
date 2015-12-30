@@ -51,5 +51,5 @@ bakcyn='\e[46m'   # Cyan
 bakwht='\e[47m'   # White
 txtrst='\e[0m'    # Text Reset
 
-export PS1="\[$bldblk\][\[$txtgrn\]\D{%F %T}\[$bldblk\]]\[$bldblk\][\[$bldblu\]\u\[$bldblk\]@\[$bldcyn\]\h \[$bldred\]\w\[$bldblk\]]\n\$ \[$txtrst\]"
+export PS1="\[$bldblk\][\[$txtgrn\]\D{%F %T}\[$bldblk\]]\[$bldblk\][\[$bldcyn\]\u\[$bldblk\]@\[$bldcyn\]\h \[$bldred\]\w\[$bldblk\]]\n\$ \[$txtrst\]"
 
