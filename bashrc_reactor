@@ -2,6 +2,7 @@
 export P4CLIENT=jtao-linux
 export P4PORT=perforce1:1999
 export P4EDITOR=vim
+export P4DIFF=colordiff
 
 # Reactor runtime environment
 export RS_ROOT=~/reactorRoot
