@@ -1,3 +1,6 @@
+# Term type (cooperating with vim color schemes)
+export TERM='xterm-256color'
+
 # Set the ulimit to ensure that the creation of core files are never avoided on size grounds
 ulimit -H -c unlimited > /dev/null
 ulimit -S -c unlimited > /dev/null
@@ -16,7 +19,6 @@ alias dsu='find $1 -type d | xargs du -sm | sort -g'
 alias tg='ctags -R *'
 
 # Prompt
-
 txtblk='\e[0;30m' # Black - Regular
 txtred='\e[0;31m' # Red
 txtgrn='\e[0;32m' # Green
