@@ -24,16 +24,19 @@ else
 	export LD_LIBRARY_PATH=${HOME}/lib:${RS_BUILDKIT}/Linux/i686-gcc4.1.x/29west/UMS_6.5/Linux-glibc-2.3-i686/lib:/usr/local/lib:${LD_LIBRARY_PATH}
 fi
 
-# Reactor Dev Environment
-export USE_NATIVE_STLPORT=1
-
 # Alias
 alias rss='cd `readlink ${RS_ROOT}/release`/src'
 alias rsv='cd $RS_VAR'
 alias rsr='cd $RS_ROOT'
 
-export REACTOR_RELEASE_PATH=`readlink ${RS_ROOT}/release`
-alias rsb='cd "${RS_VAR}/../build/""${REACTOR_RELEASE_PATH//\//_}"'
+function fill_reactor_release_path()
+{
+    export REACTOR_RELEASE_PATH=`readlink ${RS_ROOT}/release`
+}
+alias rsb='fill_reactor_release_path; cd "${RS_VAR}/../build/""${REACTOR_RELEASE_PATH//\//_}"'
+
+# Reactor Dev Environment
+#export USE_NATIVE_STLPORT=1
 
 # Tibco Setup
 #export RV_ROOT=${RS_BUILDKIT}/Linux/i686-gcc4.1.x/tibrv/8.1
