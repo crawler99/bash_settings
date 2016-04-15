@@ -33,7 +33,8 @@ function fill_reactor_release_path()
 {
     export REACTOR_RELEASE_PATH=`readlink ${RS_ROOT}/release`
 }
-alias rsb='fill_reactor_release_path; cd "${RS_VAR}/../build/""${REACTOR_RELEASE_PATH//\//_}"'
+alias rsbd='fill_reactor_release_path; cd "${RS_VAR}/../build/""${REACTOR_RELEASE_PATH//\//_}""/debug"'
+alias rsbr='fill_reactor_release_path; cd "${RS_VAR}/../build/""${REACTOR_RELEASE_PATH//\//_}""/release"'
 
 # Reactor Dev Environment
 #export USE_NATIVE_STLPORT=1
