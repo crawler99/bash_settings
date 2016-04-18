@@ -26,7 +26,7 @@ fi
 
 # Alias
 alias rss='cd `readlink ${RS_ROOT}/release`/src'
-alias rsv='cd $RS_VAR'
+alias rsv='cd $RS_VAR/'`date +%Y%m%d`
 alias rsr='cd $RS_ROOT'
 
 function fill_reactor_release_path()
