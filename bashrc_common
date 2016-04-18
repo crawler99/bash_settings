@@ -17,6 +17,7 @@ export RS_HOSTNAME=${HOSTNAME}
 # Alias
 alias dsu='find $1 -type d | xargs du -sm | sort -g'
 alias tg='ctags -R *'
+alias lt='ls -lht'
 
 # Prompt
 txtblk='\e[0;30m' # Black - Regular
