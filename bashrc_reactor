@@ -5,6 +5,8 @@ export P4EDITOR=vim
 export P4DIFF=colordiff
 
 # Reactor runtime environment
+export RS_PLATFORM=`uname -s``uname -p`
+export RS_HOSTNAME=${HOSTNAME}
 export RS_ROOT=~/reactorRoot
 export RS_VAR=/opt/developer/jtao/reactor/log
 
