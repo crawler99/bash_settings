@@ -28,13 +28,13 @@ else
 fi
 
 # Alias
-alias rss='cd `readlink ${RS_VM_ROOT}/release`/src'
+alias rss='cd `readlink -f ${RS_VM_ROOT}/release`/src'
 alias rsv='cd $RS_VAR/'`date +%Y%m%d`'/log'
 alias rsr='cd $RS_ROOT'
 
 function fill_reactor_release_path()
 {
-    export REACTOR_RELEASE_PATH=`readlink ${RS_VM_ROOT}/release`
+    export REACTOR_RELEASE_PATH=`readlink -f ${RS_VM_ROOT}/release`
 }
 alias rsbd='fill_reactor_release_path; cd "${RS_VAR}/../build/""${REACTOR_RELEASE_PATH//\//_}""/debug"'
 alias rsbr='fill_reactor_release_path; cd "${RS_VAR}/../build/""${REACTOR_RELEASE_PATH//\//_}""/release"'
