@@ -2,7 +2,7 @@
 export P4CLIENT=jtao-linux-vm
 export P4PORT=perforce1.liquid-capital.liquidcap.com:1999
 export P4EDITOR=vim
-export P4DIFF=colordiff
+export P4DIFF=diff
 
 # Reactor runtime environment
 export RS_PLATFORM=`uname -s``uname -p`
