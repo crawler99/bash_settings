@@ -7,7 +7,6 @@ export P4DIFF=diff
 # Reactor runtime environment
 export RS_PLATFORM=`uname -s``uname -p`
 export RS_HOSTNAME=${HOSTNAME}
-export RS_ROOT=~/reactorRoot
 export RS_VM_ROOT=~/vm
 export RS_VAR=/opt/developer/jtao/reactor/log
 
@@ -30,7 +29,7 @@ fi
 # Alias
 alias rss='cd `readlink -f ${RS_VM_ROOT}/release`/src'
 alias rsv='cd $RS_VAR/'`date +%Y%m%d`'/log'
-alias rsr='cd $RS_ROOT'
+alias rsr='cd $RS_VM_ROOT'
 
 function fill_reactor_release_path()
 {
