@@ -9,6 +9,7 @@ umask 027
 alias dsu='find $1 -type d | xargs du -sm | sort -g'
 alias tg='ctags -R *'
 alias lt='ls -lht'
+alias lta='ls -lhta'
 
 # Prompt
 txtblk='\e[0;30m' # Black - Regular
