@@ -11,6 +11,10 @@ alias tg='ctags -R *'
 alias lt='ls -lht'
 alias lta='ls -lhta'
 
+# Prioritize user home in the searching path
+export PATH=${HOME}/bin:${PATH}
+export LD_LIBRARY_PATH=${HOME}/lib:{$LD_LIBRARY_PATH}
+
 # Prompt
 txtblk='\e[0;30m' # Black - Regular
 txtred='\e[0;31m' # Red
