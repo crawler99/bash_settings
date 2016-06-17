@@ -39,20 +39,3 @@ function fill_reactor_release_path()
 alias rsbd='fill_reactor_release_path; cd "${RS_VAR}/../build/""${REACTOR_RELEASE_PATH//\//_}""/debug"'
 alias rsbr='fill_reactor_release_path; cd "${RS_VAR}/../build/""${REACTOR_RELEASE_PATH//\//_}""/release"'
 
-# Reactor Dev Environment
-#export USE_NATIVE_STLPORT=1
-
-# Tibco Setup
-#export RV_ROOT=${RS_BUILDKIT}/Linux/i686-gcc4.1.x/tibrv/8.1
-#export RS_RV_ROOT=${RV_ROOT}
-#export RS_RV_INC=${RS_RV_ROOT}/include
-#export RS_RV_LIB=${RS_RV_ROOT}/lib
-#export RS_RV_BIN=${RS_RV_ROOT}/bin
-
-# Versant Setup
-#export VERSANT_ROOT=/usr/local/versant/7.0.1
-#export RS_VERSANT_ROOT=${VERSANT_ROOT}
-#export RS_VERSANT_INC=${RS_VERSANT_ROOT}/h
-#export RS_VERSANT_LIB=${RS_VERSANT_ROOT}/lib
-#export RS_VERSANT_BIN=${RS_VERSANT_ROOT}/bin
-
