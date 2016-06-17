@@ -10,6 +10,7 @@ alias dsu='find $1 -type d | xargs du -sm | sort -g'
 alias tg='ctags -R *'
 alias lt='ls -lht'
 alias lat='ls -lhta'
+alias tree='tree --charset ASCII'
 
 # Prioritize user home in the searching path
 export PATH=${HOME}/bin:${PATH}
