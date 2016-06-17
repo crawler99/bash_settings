@@ -9,7 +9,7 @@ umask 027
 alias dsu='find $1 -type d | xargs du -sm | sort -g'
 alias tg='ctags -R *'
 alias lt='ls -lht'
-alias lta='ls -lhta'
+alias lat='ls -lhta'
 
 # Prioritize user home in the searching path
 export PATH=${HOME}/bin:${PATH}
