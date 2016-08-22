@@ -20,10 +20,10 @@ fi
 if [ `uname -i` == x86_64 ]; then
     export PYTHONHOME=${RS_BUILDKIT}/python2
 	export PATH=${RS_BUILDKIT}/cmake/bin:${RS_BUILDKIT}/gdb/bin:${RS_BUILDKIT}/29west/bin:${PATH}
-	export LD_LIBRARY_PATH=${RS_BUILDKIT}/gcc/lib64:${PYTHONHOME}/lib:${RS_BUILDKIT}/29west/lib:${LD_LIBRARY_PATH}
+	export LD_LIBRARY_PATH=${RS_BUILDKIT}/openonload/lib64:${RS_BUILDKIT}/gcc/lib64:${PYTHONHOME}/lib:${RS_BUILDKIT}/29west/lib:${LD_LIBRARY_PATH}
 else
 	export PATH=/home/build/bin:${RS_BUILDKIT}/Linux/i686-gcc4.1.x/29west/UMS_6.5/Linux-glibc-2.3-i686/bin:${PATH}
-	export LD_LIBRARY_PATH=${RS_BUILDKIT}/Linux/i686-gcc4.1.x/29west/UMS_6.5/Linux-glibc-2.3-i686/lib:/usr/local/lib:${LD_LIBRARY_PATH}
+	export LD_LIBRARY_PATH=${RS_BUILDKIT}/openonload/lib64:${RS_BUILDKIT}/Linux/i686-gcc4.1.x/29west/UMS_6.5/Linux-glibc-2.3-i686/lib:/usr/local/lib:${LD_LIBRARY_PATH}
 fi
 
 # Alias
