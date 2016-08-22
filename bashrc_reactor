@@ -8,7 +8,6 @@ export P4DIFF=colordiff
 export RS_PLATFORM=`uname -s``uname -p`
 export RS_HOSTNAME=${HOSTNAME}
 export RS_ROOT=~/reactorRoot
-export RS_VM_ROOT=~/vm
 export RS_VAR=/opt/developer/jtao/reactor/log
 
 if [ `uname -i` == x86_64 ]; then
@@ -33,13 +32,13 @@ function get_current_date()
     export RS_CURRENT_DATE=`date +%Y%m%d`;
 }
 
-alias rss='cd `readlink -f ${RS_VM_ROOT}/release`/src'
+alias rss='cd `readlink -f ${RS_ROOT}/release`/src'
 alias rsv='get_current_date; cd $RS_VAR/${RS_CURRENT_DATE}/log'
 alias rsr='cd $RS_ROOT'
 
 function fill_reactor_release_path()
 {
-    export REACTOR_RELEASE_PATH=`readlink -f ${RS_VM_ROOT}/release`
+    export REACTOR_RELEASE_PATH=`readlink -f ${RS_ROOT}/release`
 }
 alias rsbd='fill_reactor_release_path; cd "${RS_VAR}/../build/""${REACTOR_RELEASE_PATH//\//_}""/debug"'
 alias rsbr='fill_reactor_release_path; cd "${RS_VAR}/../build/""${REACTOR_RELEASE_PATH//\//_}""/release"'
