@@ -12,6 +12,17 @@ alias lt='ls -lht'
 alias lat='ls -lhta'
 alias tree='tree --charset ASCII'
 
+function format_xml_file()
+{
+    for f in $*
+    do
+        mv $f $f.bak || exit 1
+        xmllint --format $f.bak > $f
+        rm $f.bak
+    done
+}
+alias xf='format_xml_file'
+
 # Prioritize user home in the searching path
 export PATH=${HOME}/bin:${PATH}
 export LD_LIBRARY_PATH=${HOME}/lib:${LD_LIBRARY_PATH}
