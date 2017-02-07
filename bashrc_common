@@ -24,7 +24,7 @@ function format_xml_file()
         fi
     done
 }
-alias xf='format_xml_file'
+alias fx='format_xml_file'
 
 # Prioritize user home in the searching path
 export PATH=${HOME}/bin:${PATH}
