@@ -37,3 +37,5 @@ function fill_reactor_release_path()
 alias rsbd='fill_reactor_release_path; cd "${RS_VAR}/../build/""${REACTOR_RELEASE_PATH//\//_}""/debug"'
 alias rsbr='fill_reactor_release_path; cd "${RS_VAR}/../build/""${REACTOR_RELEASE_PATH//\//_}""/release"'
 
+# Export functions for outter usage
+export -f fill_reactor_release_path
