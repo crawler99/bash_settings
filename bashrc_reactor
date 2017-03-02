@@ -33,6 +33,7 @@ function get_current_date()
 }
 
 alias rss='cd `readlink -f ${RS_ROOT}/release`/src'
+alias rsi='cd `readlink -f ${RS_ROOT}/release_install`'
 alias rsv='get_current_date; cd $RS_VAR/${RS_CURRENT_DATE}/log'
 alias rsr='cd $RS_ROOT'
 

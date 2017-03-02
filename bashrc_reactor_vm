@@ -27,6 +27,7 @@ fi
 
 # Alias
 alias rss='cd `readlink -f ${RS_ROOT}/release`/src'
+alias rsi='cd `readlink -f ${RS_ROOT}/release_install`'
 alias rsv='cd $RS_VAR/'`date +%Y%m%d`'/log'
 alias rsr='cd $RS_ROOT'
 
