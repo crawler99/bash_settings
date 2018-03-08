@@ -9,20 +9,17 @@ export RS_PLATFORM=`uname -s``uname -p`
 export RS_HOSTNAME=${HOSTNAME}
 export RS_ROOT=~/reactorRoot
 export RS_VAR=/opt/developer/jtao/reactor/log
-
-if [ `uname -i` == x86_64 ]; then
-    export RS_BUILDKIT=/home/build/BuildKit/BuildKit2_jtao
-else
-    export RS_BUILDKIT=/home/build/BuildKit/BuildKit
-fi
+export RS_BUILDKIT=~/BuildKit
 
 # Path and lib path
 if [ `uname -i` == x86_64 ]; then
-    export PYTHONHOME=${RS_BUILDKIT}/python2
-    export PATH=${RS_BUILDKIT}/cmake/bin:${RS_BUILDKIT}/gdb/bin:${RS_BUILDKIT}/29west/bin:${PYTHONHOME}/bin:${PATH}
-    export LD_LIBRARY_PATH=${RS_BUILDKIT}/openonload/lib64:${RS_BUILDKIT}/gcc/lib64:${PYTHONHOME}/lib:${RS_BUILDKIT}/29west/lib:${LD_LIBRARY_PATH}
+    #export PYTHONHOME=${RS_BUILDKIT}/python27
+    #export PATH=${RS_BUILDKIT}/cmake/bin:${RS_BUILDKIT}/gdb/bin:${RS_BUILDKIT}/29west/bin:${PYTHONHOME}/bin:${PATH}
+    #export LD_LIBRARY_PATH=${RS_BUILDKIT}/openonload/lib64:${RS_BUILDKIT}/gcc/lib64:${PYTHONHOME}/lib:${RS_BUILDKIT}/29west/lib:${LD_LIBRARY_PATH}
+    export PATH=${RS_BUILDKIT}/cmake/bin:${RS_BUILDKIT}/gdb/bin:${RS_BUILDKIT}/29west/bin:${PATH}
+    export LD_LIBRARY_PATH=${RS_BUILDKIT}/openonload/lib64:${RS_BUILDKIT}/gcc/lib64:${RS_BUILDKIT}/29west/lib:${LD_LIBRARY_PATH}
 else
-    export PATH=/home/build/bin:${RS_BUILDKIT}/Linux/i686-gcc4.1.x/29west/UMS_6.5/Linux-glibc-2.3-i686/bin:${PATH}
+    export PATH=${RS_BUILDKIT}/Linux/i686-gcc4.1.x/29west/UMS_6.5/Linux-glibc-2.3-i686/bin:${PATH}
     export LD_LIBRARY_PATH=${RS_BUILDKIT}/openonload/lib64:${RS_BUILDKIT}/Linux/i686-gcc4.1.x/29west/UMS_6.5/Linux-glibc-2.3-i686/lib:/usr/local/lib:${LD_LIBRARY_PATH}
 fi
 
