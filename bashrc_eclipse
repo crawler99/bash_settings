@@ -4,3 +4,4 @@ source scl_source enable devtoolset-7
 # Alias
 alias gg='cd ~/GitHub'
 alias gb='cd ~/Bitbucket'
+alias gp='cd ~/Programs'
