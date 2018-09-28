@@ -1,7 +1,9 @@
 # GCC config
-source scl_source enable devtoolset-7
+#source scl_source enable devtoolset-7
 
 # Alias
 alias gg='cd ~/GitHub'
 alias gb='cd ~/Bitbucket'
 alias gp='cd ~/Programs'
+alias gd='cd ~/Downloads'
+alias lsexe='find ./ -executable -type f'
