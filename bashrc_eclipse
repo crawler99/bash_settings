@@ -1,3 +1,6 @@
+# Path
+export PATH=${HOME}/Programs/go/bin:${PATH}
+
 # GCC config
 source scl_source enable devtoolset-7
 
