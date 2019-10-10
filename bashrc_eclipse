@@ -1,5 +1,5 @@
 # Path
-export PATH=${HOME}/Programs/go/bin:${PATH}
+export PATH=${HOME}/Programs/go/bin:/opt/cmake/3.14.4/bin:${PATH}
 
 # GCC config
 source scl_source enable devtoolset-7
