@@ -2,8 +2,7 @@
 export PATH=${HOME}/Programs/go/bin:/opt/cmake/3.14.4/bin:${PATH}
 
 # GCC config
-#source scl_source enable devtoolset-7
-scl enable devtoolset-8 bash
+source scl_source enable devtoolset-8
 
 # Alias
 alias gg='cd ~/GitHub'
