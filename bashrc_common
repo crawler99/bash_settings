@@ -5,6 +5,9 @@ ulimit -S -c unlimited > /dev/null
 # Deal with the umask
 umask 027
 
+# Rust env
+source ~/.cargo/env
+
 # Alias
 alias dsu='find $1 -type d | xargs du -sm | sort -g'
 alias tg='ctags -R *'
