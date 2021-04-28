@@ -2,8 +2,8 @@
 ulimit -H -c unlimited > /dev/null
 ulimit -S -c unlimited > /dev/null
 
-# Deal with the umask
-umask 027
+# Deal with the umask (027)
+umask "u=rwx,g=rx,o="
 
 # Rust env
 source ~/.cargo/env
@@ -11,8 +11,8 @@ source ~/.cargo/env
 # Alias
 alias dsu='find $1 -type d | xargs du -sm | sort -g'
 alias tg='ctags -R *'
-alias lt='ls -lht'
-alias lat='ls -lhta'
+alias lt='ls -lhtv'
+alias lat='ls -lhtav'
 alias tree='tree --charset ASCII'
 
 function format_xml_file()
