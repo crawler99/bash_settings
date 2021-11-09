@@ -1,5 +1,5 @@
 #Locale
-export LC ALL=C
+export LC_ALL=C
 
 #PATH
 export PATH=/hostname/sig/sbin:/hostname/sig/bin:/hostname/sig/local/bin:$PATH:/sbin:/usr/sbin
@@ -7,32 +7,32 @@ export PATH=/hostname/sig/sbin:/hostname/sig/bin:/hostname/sig/local/bin:$PATH:/
 #Perforce
 export P4PORT=ausperforce:1666
 export P4USER=taoj
-export P4CLIENT=taoj linux
+export P4CLIENT=taoj_linux
 export PACONFIG=.p4
 export P4DIFF="gvim -fdR"
 export P4EDITOR=vim
 export P4TICKETS=/home/taoj/.p4tickets
 
 #SVN
-export SVN EDITOR=vim
+export SVN_EDITOR=vim
 
 #Alias
 alias ga='cd /hostname/taoj/Analysis'
-alias gt='cd /hostname/taoj/Tickets
-alias gp='cd/hostname/taoj/Perforce/taoj_linux
+alias gt='cd /hostname/taoj/Tickets'
+alias gp='cd /hostname/taoj/Perforce/taoj_linux'
 
-if [-e /etc/SuSE-release ]; then
-    export SLES=$(cat /etc/SuSE-release | grep VERSION | awk "{print $3}*)
+if [ -e /etc/SuSE-release ]; then
+    export SLES=$(cat /etc/SuSE-release | grep VERSION | awk '{print $3}')
 fi
 
 if [ "$SLES" ]; then
     if [ "$SLES" = "11" ]; then
-        if [ -f /hostname/trading/sdk/x86_64/2.11.3/.sigrc];then
+        if [ -f /hostname/trading/sdk/x86_64/2.11.3/.sigrc ];then
             . /hostname/trading/sdk/x86_64/2.11.3/.sigrc
             export TRADING_SD_VERSION=2.11.3
         fi
     elif [ "$SLES" = "12" ]; then
-        if [ -f /hostname/trading/sdk/x86_64/2.19.0/.sigrc];then
+        if [ -f /hostname/trading/sdk/x86_64/2.19.0/.sigrc ];then
             . /hostname/trading/sdk/x86_64/2.19.0/.sigrc
             export TRADING_SD_VERSION=2.19.0
         fi
