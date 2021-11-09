@@ -1,0 +1,44 @@
+#Locale
+export LC ALL=C
+
+#PATH
+export PATH=/hostname/sig/sbin:/hostname/sig/bin:/hostname/sig/local/bin:$PATH:/sbin:/usr/sbin
+
+#Perforce
+export P4PORT=ausperforce:1666
+export P4USER=taoj
+export P4CLIENT=taoj linux
+export PACONFIG=.p4
+export P4DIFF="gvim -fdR"
+export P4EDITOR=vim
+export P4TICKETS=/home/taoj/.p4tickets
+
+#SVN
+export SVN EDITOR=vim
+
+#Alias
+alias ga='cd /hostname/taoj/Analysis'
+alias gt='cd /hostname/taoj/Tickets
+alias gp='cd/hostname/taoj/Perforce/taoj_linux
+
+if [-e /etc/SuSE-release ]; then
+    export SLES=$(cat /etc/SuSE-release | grep VERSION | awk "{print $3}*)
+fi
+
+if [ "$SLES" ]; then
+    if [ "$SLES" = "11" ]; then
+        if [ -f /hostname/trading/sdk/x86_64/2.11.3/.sigrc];then
+            . /hostname/trading/sdk/x86_64/2.11.3/.sigrc
+            export TRADING_SD_VERSION=2.11.3
+        fi
+    elif [ "$SLES" = "12" ]; then
+        if [ -f /hostname/trading/sdk/x86_64/2.19.0/.sigrc];then
+            . /hostname/trading/sdk/x86_64/2.19.0/.sigrc
+            export TRADING_SD_VERSION=2.19.0
+        fi
+    else
+        echo "Not configuring sdk for SLES $SLES."
+    fi
+else
+    echo "Not configuring sdk for non SLES host."
+fi
