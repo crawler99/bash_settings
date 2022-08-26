@@ -2,7 +2,7 @@
 export LC_ALL=C
 
 #PATH
-export PATH=/hostname/sig/sbin:/hostname/sig/bin:/hostname/sig/local/bin:$PATH:/sbin:/usr/sbin
+export PATH=/hostname/sig/sbin:/hostname/sig/bin:/hostname/sig/local/bin:/sbin:/usr/sbin:/home/syddev/connectivity/mdf/official_releases/latest/$(/home/sydney/connectivity/mdf/bin/linux_platform_label)/bin:$PATH
 
 #Perforce
 export P4PORT=ausperforce:1666
