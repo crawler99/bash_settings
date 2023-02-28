@@ -21,5 +21,8 @@ alias ga='cd /hostname/dev/sig/Confucius/dev_taoj/Analysis'
 alias gt='cd /hostname/taoj/Tests'
 alias gp='cd /hostname/taoj/Perforce/taoj_linux'
 
+#Anaconda
+conda config --set ssl_verify False
+
 #SDK
 source /hostname/trading/sdk/.sigrc
